@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gi meg 40 kr</title>
+</head>
+<body>
+    <h1>Login eller lag en ny bruker</h1>
+    <p>Dette er en test</p>
+    <h2>Lag en ny bruker</h2>
+    <form id="register" action="register">
+        <input type="text" placeholder="brukernavn">
+        <input type="text" placeholder="passord">
+        <input type="submit" value="Lag en ny bruker">
+    </form>
+
+    <h2>Login til en bruker</h2>
+    <form  id="login"  action="login">
+        <input type="text" placeholder="brukernavn">
+        <input type="text" placeholder="passord">
+        <input type="submit" value="Login">
+
+
+    </form>
+
+    <script>
+        document.getElementById("login").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+
+            document.getElementById("result").textContent = "Du er nå logget inn til Vibra! (Test)"
+        });
+    </script>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("register").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            
+            document.getElementById("result").textContent = "Du er nå et medlem av Vibra! (Test)";
+        });
+    </script>
+</body>
+</html>
